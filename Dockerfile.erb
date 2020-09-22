@@ -1,0 +1,12 @@
+FROM busybox
+
+<%= snippet('labels', binding) -%>
+
+<%= snippet('docker-entrypoint', binding) -%>
+
+<%= snippet('dockerize', binding) -%>
+
+<%= snippet('tini', binding) -%>
+
+ENTRYPOINT ["/tini", "--", "/docker-entrypoint.sh"]
+CMD [ "init-loop" ]
