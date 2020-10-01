@@ -8,6 +8,8 @@ ENV KEYCLOAK_CLIENT_SECRET "00000000-0000-0000-0000-000000000000"
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
 LABEL build_id="1601491943"
 
+USER root
+
 RUN opm install \
         bungle/lua-resty-session \
         zmartzone/lua-resty-openidc
@@ -25,3 +27,5 @@ RUN chown -R :root /usr/local/openresty \
  && chmod -R g+rw  /usr/local/openresty
 
 COPY 50-copy-config.sh /docker-entrypoint.d/
+
+USER nginx
