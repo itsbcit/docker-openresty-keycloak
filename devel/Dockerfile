@@ -5,7 +5,8 @@ ENV KEYCLOAK_REALM         "master"
 ENV KEYCLOAK_CLIENT_ID     "nginx"
 ENV KEYCLOAK_CLIENT_SECRET "00000000-0000-0000-0000-000000000000"
 
-<%= snippet('labels', binding) -%>
+LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
+LABEL build_id="1602104241"
 
 USER root
 
@@ -13,11 +14,7 @@ RUN opm install \
         bungle/lua-resty-session \
         zmartzone/lua-resty-openidc
 
-<% if image.variant == '' -%>
-ADD https://gist.github.com/jweisner/347c0b73ee3fe7992359d329c1fcb21e/raw/5509c3b9a1deed64e837a18698fc95bd862244ff/keycloak.lua /usr/local/openresty/site/lualib/resty/keycloak.lua
-<% else -%>
 ADD https://github.com/jweisner/lua-resty-keycloak/raw/master/lib/resty/keycloak.lua /usr/local/openresty/site/lualib/resty/keycloak.lua
-<% end -%>
 
 RUN chmod 0664 /usr/local/openresty/site/lualib/resty/keycloak.lua
 

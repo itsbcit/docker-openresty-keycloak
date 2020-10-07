@@ -8,3 +8,13 @@ vars:
   de_version: '1.5'
   dockerize_version: '0.6.0'
   resty_keycloak_version: '0.0.0'
+variants:
+  '': {}
+  'devel':
+    files:
+      - 00-openresty.conf
+      - 50-copy-config.sh
+      - default.conf
+      - openid-auth.conf
+      - openid-authz.conf
+      - openid-callback.conf
