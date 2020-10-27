@@ -6,7 +6,7 @@ ENV KEYCLOAK_CLIENT_ID     "nginx"
 ENV KEYCLOAK_CLIENT_SECRET "00000000-0000-0000-0000-000000000000"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
-LABEL build_id="1602104241"
+LABEL build_id="1603823299"
 
 USER root
 
