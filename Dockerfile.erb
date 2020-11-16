@@ -32,5 +32,6 @@ RUN chown -R :root /usr/local/openresty \
  && chmod -R g+rw  /usr/local/openresty
 
 COPY 50-copy-config.sh /docker-entrypoint.d/
+COPY 60-set-keycloak-env.sh /docker-entrypoint.d/
 
 USER nginx
