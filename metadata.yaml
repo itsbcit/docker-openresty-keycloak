@@ -12,8 +12,6 @@ variants:
   '': {}
   'devel':
     files:
-      - 00-openresty.conf
-      - 50-copy-config.sh
       - 01-keycloak.conf
       - 60-set-keycloak-env.sh
       - default.conf

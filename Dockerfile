@@ -23,13 +23,11 @@ COPY openid-callback.conf /usr/local/openresty/nginx/conf
 COPY openid-auth.conf     /usr/local/openresty/nginx/conf
 COPY openid-authz.conf    /usr/local/openresty/nginx/conf
 COPY default.conf         /usr/local/openresty/nginx/conf.d
-COPY 00-openresty.conf    /usr/local/openresty/nginx/conf.d
 COPY 01-keycloak.conf    /usr/local/openresty/nginx/conf.d
 
 RUN chown -R :root /usr/local/openresty \
  && chmod -R g+rw  /usr/local/openresty
 
-COPY 50-copy-config.sh /docker-entrypoint.d/
 COPY 60-set-keycloak-env.sh /docker-entrypoint.d/
 
 USER nginx
