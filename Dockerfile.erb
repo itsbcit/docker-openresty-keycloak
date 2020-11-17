@@ -22,11 +22,11 @@ ADD https://github.com/jweisner/lua-resty-keycloak/raw/master/lib/resty/keycloak
 
 RUN chmod 0664 /usr/local/openresty/site/lualib/resty/keycloak.lua
 
-COPY openid-callback.conf /usr/local/openresty/nginx/conf
-COPY openid-auth.conf     /usr/local/openresty/nginx/conf
-COPY openid-authz.conf    /usr/local/openresty/nginx/conf
-COPY default.conf         /usr/local/openresty/nginx/conf.d
-COPY 01-keycloak.conf    /usr/local/openresty/nginx/conf.d
+COPY openid-callback.conf   /usr/local/openresty/nginx/conf
+COPY openid-auth.conf       /usr/local/openresty/nginx/conf
+COPY openid-authz.conf      /usr/local/openresty/nginx/conf
+COPY resty-01-keycloak.conf /usr/local/openresty/nginx/conf
+COPY default.conf           /usr/local/openresty/nginx/conf.d
 
 RUN chown -R :root /usr/local/openresty \
  && chmod -R g+rw  /usr/local/openresty
