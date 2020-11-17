@@ -1,7 +1,7 @@
 kc_config="/usr/local/openresty/nginx/conf/resty-01-keycloak.conf"
 
 # abort if keycloak config is removed
-[ ! -f $kc_config ] && return
+[ -f $kc_config ] || return
 
 # check for "keycloak_endpoint" already set
 if (! grep -q "^set \$keycloak_endpoint" $kc_config );then
