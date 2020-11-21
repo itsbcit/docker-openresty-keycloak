@@ -34,6 +34,4 @@ COPY default.conf           /usr/local/openresty/nginx/conf.d
 RUN chown -R :root /usr/local/openresty \
  && chmod -R g+rw  /usr/local/openresty
 
-COPY 60-set-keycloak-env.sh /docker-entrypoint.d/
-
 USER nginx
