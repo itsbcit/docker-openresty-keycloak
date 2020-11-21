@@ -1,9 +1,12 @@
 FROM bcit/openshift-openresty:latest
 
-ENV KEYCLOAK_ENDPOINT      "https://keycloak.example.com/auth"
-ENV KEYCLOAK_REALM         "master"
-ENV KEYCLOAK_CLIENT_ID     "nginx"
-ENV KEYCLOAK_CLIENT_SECRET "00000000-0000-0000-0000-000000000000"
+ENV KEYCLOAK_ANONYMOUS_POLICY_MODE "permissive"
+ENV KEYCLOAK_ANONYMOUS_SCOPE       "read-public"
+ENV KEYCLOAK_AUTH_SERVER_URL       "https://keycloak.example.com/auth"
+ENV KEYCLOAK_CALLBACK_URI          "/callback"
+ENV KEYCLOAK_CLIENT_ID             "nginx"
+ENV KEYCLOAK_CLIENT_SECRET         "00000000-0000-0000-0000-000000000000"
+ENV KEYCLOAK_REALM                 "master"
 
 <%= snippet('labels', binding) -%>
 
