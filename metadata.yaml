@@ -12,7 +12,6 @@ variants:
   '': {}
   'devel':
     files:
-      - 60-set-keycloak-env.sh
       - default.conf
       - openid-auth.conf
       - openid-authz.conf
