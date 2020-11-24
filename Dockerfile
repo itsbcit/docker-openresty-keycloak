@@ -9,7 +9,7 @@ ENV KEYCLOAK_CLIENT_SECRET         "00000000-0000-0000-0000-000000000000"
 ENV KEYCLOAK_REALM                 "master"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
-LABEL build_id="1606244148"
+LABEL build_id="1606258660"
 
 USER root
 
@@ -23,11 +23,12 @@ ADD https://github.com/jweisner/lua-resty-keycloak/raw/master/lib/resty/keycloak
 
 RUN chmod 0664 /usr/local/openresty/site/lualib/resty/keycloak.lua
 
-COPY openid-callback.conf       /usr/local/openresty/nginx/conf
-COPY openid-auth.conf           /usr/local/openresty/nginx/conf
-COPY openid-authz.conf          /usr/local/openresty/nginx/conf
-COPY resty-01-keycloak-set.conf /usr/local/openresty/nginx/conf
-COPY default.conf               /usr/local/openresty/nginx/conf.d
+COPY default.conf         /usr/local/openresty/nginx/conf.d
+COPY keycloak.conf        /usr/local/openresty/nginx/conf
+COPY openid-auth.conf     /usr/local/openresty/nginx/conf
+COPY openid-authz.conf    /usr/local/openresty/nginx/conf
+COPY openid-callback.conf /usr/local/openresty/nginx/conf
+COPY resty-env.conf       /usr/local/openresty/nginx/conf
 
 RUN chown -R :root /usr/local/openresty \
  && chmod -R g+rw  /usr/local/openresty
