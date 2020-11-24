@@ -14,7 +14,8 @@ USER root
 
 RUN opm install \
         bungle/lua-resty-session \
-        zmartzone/lua-resty-openidc
+        zmartzone/lua-resty-openidc \
+        3scale/lua-resty-env
 
 <% if image.variant == '' -%>
 # TODO: this will be the release version
