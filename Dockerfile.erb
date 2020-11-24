@@ -30,7 +30,6 @@ COPY openid-callback.conf       /usr/local/openresty/nginx/conf
 COPY openid-auth.conf           /usr/local/openresty/nginx/conf
 COPY openid-authz.conf          /usr/local/openresty/nginx/conf
 COPY resty-01-keycloak-set.conf /usr/local/openresty/nginx/conf
-COPY resty-02-keycloak-env.conf /usr/local/openresty/nginx/conf
 COPY default.conf               /usr/local/openresty/nginx/conf.d
 
 RUN chown -R :root /usr/local/openresty \

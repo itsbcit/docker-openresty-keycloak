@@ -17,4 +17,4 @@ variants:
       - openid-authz.conf
       - openid-callback.conf
       - resty-01-keycloak-set.conf
-      - resty-02-keycloak-env.conf
+      - resty-env.conf
