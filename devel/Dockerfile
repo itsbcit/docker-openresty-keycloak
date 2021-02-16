@@ -9,14 +9,15 @@ ENV KEYCLOAK_CLIENT_SECRET         "00000000-0000-0000-0000-000000000000"
 ENV KEYCLOAK_REALM                 "master"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
-LABEL build_id="1606258660"
+LABEL build_id="1613516586"
 
 USER root
 
 RUN opm install \
         bungle/lua-resty-session \
         zmartzone/lua-resty-openidc \
-        3scale/lua-resty-env
+        3scale/lua-resty-env \
+        fperrad/lua-messagepack
 
 ADD https://github.com/jweisner/lua-resty-keycloak/raw/master/lib/resty/keycloak.lua /usr/local/openresty/site/lualib/resty/keycloak.lua
 

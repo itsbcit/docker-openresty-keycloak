@@ -15,7 +15,8 @@ USER root
 RUN opm install \
         bungle/lua-resty-session \
         zmartzone/lua-resty-openidc \
-        3scale/lua-resty-env
+        3scale/lua-resty-env \
+        fperrad/lua-messagepack
 
 <% if image.variant == '' -%>
 # TODO: this will be the release version
