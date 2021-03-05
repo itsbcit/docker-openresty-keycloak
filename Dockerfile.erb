@@ -19,8 +19,7 @@ RUN opm install \
         fperrad/lua-messagepack
 
 <% if image.variant == '' -%>
-# TODO: this will be the release version
-ADD https://github.com/jweisner/lua-resty-keycloak/raw/master/lib/resty/keycloak.lua /usr/local/openresty/site/lualib/resty/keycloak.lua
+ADD https://github.com/jweisner/lua-resty-keycloak/releases/download/v<%= image.labels["resty_keycloak_version"] %>/keycloak.lua /usr/local/openresty/site/lualib/resty/keycloak.lua
 <% else -%>
 ADD https://github.com/jweisner/lua-resty-keycloak/raw/master/lib/resty/keycloak.lua /usr/local/openresty/site/lualib/resty/keycloak.lua
 <% end -%>
