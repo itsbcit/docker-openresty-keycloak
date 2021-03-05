@@ -19,3 +19,4 @@ variants:
       - openid-callback.conf
       - resty-env.conf
       - keycloak.conf
+      - 00-openresty.conf

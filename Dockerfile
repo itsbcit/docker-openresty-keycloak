@@ -10,7 +10,7 @@ ENV KEYCLOAK_REALM                 "master"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
 LABEL resty_keycloak_version="0.1.0-alpha"
-LABEL build_id="1614976188"
+LABEL build_id="1614977704"
 
 USER root
 
@@ -25,6 +25,7 @@ ADD https://github.com/jweisner/lua-resty-keycloak/releases/download/v0.1.0-alph
 RUN chmod 0664 /usr/local/openresty/site/lualib/resty/keycloak.lua
 
 COPY default.conf         /usr/local/openresty/nginx/conf.d
+COPY 00-openresty.conf    /usr/local/openresty/nginx/conf.d
 COPY nginx.conf           /usr/local/openresty/nginx/conf
 COPY keycloak.conf        /usr/local/openresty/nginx/conf
 COPY openid-auth.conf     /usr/local/openresty/nginx/conf
