@@ -10,7 +10,7 @@ ENV KEYCLOAK_REALM                 "master"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
 LABEL resty_keycloak_version="0.1.0-alpha"
-LABEL build_id="1614977704"
+LABEL build_id="1614978243"
 
 USER root
 
