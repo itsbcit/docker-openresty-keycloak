@@ -9,7 +9,7 @@ ENV KEYCLOAK_CLIENT_SECRET         "00000000-0000-0000-0000-000000000000"
 ENV KEYCLOAK_REALM                 "master"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
-LABEL build_id="1613516586"
+LABEL build_id="1614968058"
 
 USER root
 
