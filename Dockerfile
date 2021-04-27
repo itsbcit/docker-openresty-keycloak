@@ -9,8 +9,8 @@ ENV KEYCLOAK_CLIENT_SECRET         "00000000-0000-0000-0000-000000000000"
 ENV KEYCLOAK_REALM                 "master"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
-LABEL resty_keycloak_version="0.1.0-alpha"
 LABEL build_id="1616107335"
+LABEL resty_keycloak_version="0.2-alpha"
 
 USER root
 
@@ -20,7 +20,7 @@ RUN opm install \
         3scale/lua-resty-env \
         fperrad/lua-messagepack
 
-ADD https://github.com/jweisner/lua-resty-keycloak/releases/download/v0.1.0-alpha/keycloak.lua /usr/local/openresty/site/lualib/resty/keycloak.lua
+ADD https://github.com/jweisner/lua-resty-keycloak/releases/download/v0.2-alpha/keycloak.lua /usr/local/openresty/site/lualib/resty/keycloak.lua
 
 RUN chmod 0664 /usr/local/openresty/site/lualib/resty/keycloak.lua
 
