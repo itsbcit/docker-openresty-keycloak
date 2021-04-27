@@ -9,8 +9,8 @@ ENV KEYCLOAK_CLIENT_SECRET         "00000000-0000-0000-0000-000000000000"
 ENV KEYCLOAK_REALM                 "master"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
-LABEL resty_keycloak_version="0.1.0-alpha"
 LABEL build_id="1616107335"
+LABEL resty_keycloak_version="git"
 
 USER root
 

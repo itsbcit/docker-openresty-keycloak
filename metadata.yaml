@@ -11,6 +11,8 @@ vars:
 variants:
   '': {}
   'devel':
+    labels:
+      resty_keycloak_version: "git"
     files:
       - nginx.conf
       - default.conf
