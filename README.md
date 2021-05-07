@@ -24,3 +24,12 @@ KEYCLOAK_CLIENT_SECRET (eg. 00000000-0000-0000-0000-000000000000)
 ### How to run with default behaviour
 
 Set the ENV vars properly and it should "just work" (tm)
+
+### Redis session storage
+
+See https://github.com/bungle/lua-resty-session for available options
+
+```
+SESSION_STORAGE    = redis
+SESSION_REDIS_HOST = redis
+```
