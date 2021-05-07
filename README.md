@@ -1,7 +1,5 @@
 ## openshift-nginx-keycloak
 
-https://travis-ci.org/itsbcit/openshift-nginx-keycloak
-
 Nginx container with KeyCloak authorization support
 
 ### Tags
