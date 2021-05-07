@@ -8,6 +8,10 @@ There is only latest
 
 ### Default behaviour
 
+```
+KEYCLOAK_CACHE_STRATEGY = shared_dict
+```
+
 These environment variables will need to be set according to your KeyCloak:
 
 ```
