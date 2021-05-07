@@ -20,5 +20,6 @@ variants:
       - openid-authz.conf
       - openid-callback.conf
       - resty-env.conf
-      - keycloak.conf
+      - resty-keycloak.conf
+      - resty-session.conf
       - 00-openresty.conf
