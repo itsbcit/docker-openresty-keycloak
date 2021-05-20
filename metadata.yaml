@@ -1,6 +1,7 @@
 ---
 image_name: openshift-nginx-keycloak
-org_name: bcit
+registries:
+  - url: bcit.io
 labels:
   maintainer: "jesse@weisner.ca, chriswood.ca@gmail.com"
   resty_keycloak_version: '0.2-alpha'

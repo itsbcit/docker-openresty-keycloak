@@ -1,4 +1,4 @@
-FROM bcit/openshift-openresty:latest
+FROM bcit.io/openshift-openresty:latest
 
 ENV KEYCLOAK_ANONYMOUS_POLICY_MODE "permissive"
 ENV KEYCLOAK_ANONYMOUS_SCOPE       "read-public"
@@ -10,7 +10,7 @@ ENV KEYCLOAK_REALM                 "master"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
 LABEL resty_keycloak_version="git"
-LABEL build_id="1620416899"
+LABEL build_id="1621538021"
 
 USER root
 
