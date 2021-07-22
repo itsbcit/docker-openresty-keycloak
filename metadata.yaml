@@ -4,7 +4,7 @@ registries:
   - url: bcit.io
 labels:
   maintainer: "jesse@weisner.ca, chriswood.ca@gmail.com"
-  resty_keycloak_version: '0.2-alpha'
+  resty_keycloak_version: '0.2.2-alpha'
 vars:
   tini_version: '0.18.0'
   de_version: '1.5'
