@@ -15,6 +15,7 @@ variants:
     labels:
       resty_keycloak_version: "git"
     files:
+      - nginx-log_format.conf
       - default.conf
       - openid-auth.conf
       - openid-authz.conf
