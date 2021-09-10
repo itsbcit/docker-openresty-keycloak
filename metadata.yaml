@@ -15,7 +15,6 @@ variants:
     labels:
       resty_keycloak_version: "git"
     files:
-      - nginx.conf
       - default.conf
       - openid-auth.conf
       - openid-authz.conf
