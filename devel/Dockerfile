@@ -24,9 +24,9 @@ ADD https://github.com/jweisner/lua-resty-keycloak/raw/master/lib/resty/keycloak
 
 RUN chmod 0664 /usr/local/openresty/site/lualib/resty/keycloak.lua
 
-COPY nginx.conf           /usr/local/openresty/nginx/conf
 COPY default.conf          /usr/local/openresty/nginx/conf.d
 COPY 00-openresty.conf     /usr/local/openresty/nginx/conf.d
+COPY nginx-log_format.conf /usr/local/openresty/nginx/conf
 COPY resty-keycloak.conf   /usr/local/openresty/nginx/conf
 COPY resty-session.conf    /usr/local/openresty/nginx/conf
 COPY openid-auth.conf      /usr/local/openresty/nginx/conf
