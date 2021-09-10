@@ -24,15 +24,15 @@ ADD https://github.com/jweisner/lua-resty-keycloak/releases/download/v0.2.2-alph
 
 RUN chmod 0664 /usr/local/openresty/site/lualib/resty/keycloak.lua
 
-COPY default.conf         /usr/local/openresty/nginx/conf.d
-COPY 00-openresty.conf    /usr/local/openresty/nginx/conf.d
-COPY resty-keycloak.conf  /usr/local/openresty/nginx/conf
-COPY resty-session.conf   /usr/local/openresty/nginx/conf
-COPY openid-auth.conf     /usr/local/openresty/nginx/conf
-COPY openid-authz.conf    /usr/local/openresty/nginx/conf
-COPY openid-callback.conf /usr/local/openresty/nginx/conf
-COPY resty-env.conf       /usr/local/openresty/nginx/conf
+COPY default.conf          /usr/local/openresty/nginx/conf.d
+COPY 00-openresty.conf     /usr/local/openresty/nginx/conf.d
 COPY nginx-log_format.conf /usr/local/openresty/nginx/conf
+COPY resty-keycloak.conf   /usr/local/openresty/nginx/conf
+COPY resty-session.conf    /usr/local/openresty/nginx/conf
+COPY openid-auth.conf      /usr/local/openresty/nginx/conf
+COPY openid-authz.conf     /usr/local/openresty/nginx/conf
+COPY openid-callback.conf  /usr/local/openresty/nginx/conf
+COPY resty-env.conf        /usr/local/openresty/nginx/conf
 
 RUN chown -R :root /usr/local/openresty \
  && chmod -R g+rw  /usr/local/openresty
