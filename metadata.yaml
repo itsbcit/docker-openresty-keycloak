@@ -1,5 +1,5 @@
 ---
-image_name: openshift-nginx-keycloak
+image_name: openresty-keycloak
 registries:
   - url: bcit.io
 labels:
