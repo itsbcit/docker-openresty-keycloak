@@ -1,4 +1,4 @@
-FROM bcit.io/openshift-openresty:latest
+FROM bcit.io/openresty:latest
 
 ENV KEYCLOAK_ANONYMOUS_POLICY_MODE "permissive"
 ENV KEYCLOAK_ANONYMOUS_SCOPE       "read-public"
